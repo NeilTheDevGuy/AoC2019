@@ -6,7 +6,8 @@ namespace AoC2019
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var day = new Day1();
+            day.Run();
         }
     }
 }

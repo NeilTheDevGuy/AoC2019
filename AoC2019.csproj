@@ -5,4 +5,12 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="day1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="day1.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>
