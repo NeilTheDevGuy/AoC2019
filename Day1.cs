@@ -7,14 +7,16 @@ namespace AoC2019
     {
         public void Run()
         {
-            var result = PartTwo();
+            var input = File.ReadAllLines(@"input\day1.txt");
+            var result1 = PartOne(input);
+            var result2 = PartTwo(input);
 
-            Console.WriteLine(result);
+            Console.WriteLine(result1);
+            Console.WriteLine(result2);
         }
 
-        private int PartOne()
-        {
-            var input = File.ReadAllLines("day1.txt");
+        private int PartOne(string[] input)
+        {            
             var totalFuelRequired = 0;
             foreach (var line in input)
             { 
@@ -23,9 +25,8 @@ namespace AoC2019
             return totalFuelRequired;
         }
 
-        private int PartTwo()
-        {
-            var input = File.ReadAllLines("day1.txt");
+        private int PartTwo(string[] input)
+        {            
             var totalFuelRequired = 0;
             foreach (var line in input)
             {
