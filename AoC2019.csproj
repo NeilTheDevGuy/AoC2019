@@ -11,6 +11,8 @@
     <None Remove="Input\day3.txt" />
     <None Remove="Input\day5.txt" />
     <None Remove="Input\day6.txt" />
+    <None Remove="Input\day7.txt" />
+    <None Remove="Input\day8.txt" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,5 +28,17 @@
     <EmbeddedResource Include="Input\day6.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Input\day7.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Input\day8.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Input\day7.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Utils\" />
   </ItemGroup>
 </Project>
