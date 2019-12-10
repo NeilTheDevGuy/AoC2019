@@ -6,7 +6,7 @@ namespace AoC2019
     {
         static void Main(string[] args)
         {
-            var day = new Day8();
+            var day = new Day7();
             day.Run();
         }
     }
