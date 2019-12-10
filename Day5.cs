@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using static AoC2019.Utils.IntCode;
 
 namespace AoC2019
 {
@@ -102,15 +103,15 @@ namespace AoC2019
             var length = instruction.Length;
             if (length <= 2)
             {
-                return new OpCode(int.Parse(instruction), 0, 0);
+                return new OpCode(int.Parse(instruction), 0, 0, 0);
             }
             if (length == 3)
             {
-                return new OpCode(int.Parse(instruction.Substring(1).ToString()), 1, 0);
+                return new OpCode(int.Parse(instruction.Substring(1).ToString()), 1, 0, 0);
             }
             if (length == 4)
             {
-                return new OpCode(int.Parse(instruction.Substring(2).ToString()), int.Parse(instruction[1].ToString()), int.Parse(instruction[0].ToString()));
+                return new OpCode(int.Parse(instruction.Substring(2).ToString()), int.Parse(instruction[1].ToString()), int.Parse(instruction[0].ToString()), 0);
             }
             throw new Exception("Instruction is invalid length");
         }
@@ -128,20 +129,6 @@ namespace AoC2019
                 .Split(",")
                 .Select(int.Parse)
                 .ToArray();
-        }
-    }
-
-    public class OpCode
-    {
-        public int Type { get; set; }
-        public int ModeOne { get; set; }
-        public int ModeTwo {get; set; }        
-        
-        public OpCode(int type, int modeOne, int modeTwo)
-        {
-            Type = type;
-            ModeOne = modeOne;
-            ModeTwo = modeTwo;           
         }
     }
 }
