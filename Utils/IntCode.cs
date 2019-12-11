@@ -153,7 +153,7 @@ namespace AoC2019.Utils
             {
                 position += _relativeOffset;
             }
-            if (position > _program.Length)
+            if (position >= _program.Length)
             {
                 if (_highMem.ContainsKey(position))
                 {
@@ -181,7 +181,7 @@ namespace AoC2019.Utils
 
         private long Find(long location)
         {
-            if (location > _program.Length)
+            if (location >= _program.Length)
             {
                 if (_highMem.ContainsKey(location))
                 {

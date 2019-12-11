@@ -42,7 +42,7 @@ namespace AoC2019
 
         private long[] GetInput()
         {
-            return File.ReadAllText(@"input/day9.txt")            
+            return File.ReadAllText(@"input/day9.txt")
                 .Split(",")
                 .Select(long.Parse)
                 .ToArray();
