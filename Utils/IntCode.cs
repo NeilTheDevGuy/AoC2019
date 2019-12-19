@@ -18,7 +18,12 @@ namespace AoC2019.Utils
 
         public IntCode(long[] program)
         {
-            _program = program;
+            _program = (long[])program.Clone();
+        }
+
+        public void WriteDirectToMemory(long position, long value)
+        {
+            SetVal(position, value, 1);
         }
 
         public void Reset(long[] program)
